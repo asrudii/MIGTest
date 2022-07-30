@@ -1,0 +1,46 @@
+.container {
+  min-height: 100vh;
+}
+
+.sidebar {
+  background-color: #ffffff;
+}
+
+.header {
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-topright {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-topright > div {
+  display: flex;
+  align-items: center;
+}
+
+.nav-topright > div:nth-child(1) {
+  gap: 20px;
+}
+
+.nav-topright > div:nth-last-child(1) {
+  gap: 10px;
+}
+
+.nav-topright .nav-btn:hover {
+  cursor: pointer;
+}
+
+.content {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.footer {
+  text-align: center;
+}
