@@ -1,0 +1,11 @@
+.wrap-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card-login {
+  width: 400px;
+  height: 300px;
+}

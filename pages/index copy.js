@@ -9,7 +9,7 @@ import Template from '../components/Template';
 
 export default function Home() {
   return (
-    <Template defaultSelectedKeys="1">
+    <Template>
       <Head>
         <title>Dashboard MIG Test</title>
         <meta name="description" content="Company Dashboard MIG Test" />

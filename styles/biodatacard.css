@@ -1,0 +1,77 @@
+.card > span > img {
+  object-fit: cover;
+}
+.img-profile {
+  margin-top: -65px;
+  display: flex;
+  justify-content: center;
+}
+
+.img-profile > span > img {
+  border-radius: 65px;
+  border: 4px solid gray;
+  object-fit: cover;
+}
+
+.title-biodata {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-biodata > h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.title-biodata > span {
+  color: gray;
+}
+
+.title-biodata > div {
+  color: #35763b;
+  font-weight: 500;
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.title-biodata > div:hover {
+  cursor: pointer;
+}
+
+.card-content > ul {
+  margin-top: 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.card-content > ul > li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.card-content > ul > li > span {
+  color: gray;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.card-content > ul > li > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.card-content > ul > li .icon-desc {
+  justify-content: start;
+  color: #35763b;
+}

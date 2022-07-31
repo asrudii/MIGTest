@@ -1,20 +1,23 @@
 import {
-  DesktopOutlined,
   TeamOutlined,
   HomeOutlined,
   SearchOutlined,
   BellOutlined,
 } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu, Avatar } from 'antd';
-import { useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
-export default function Template({ children }) {
-  const [collapsed, setCollapsed] = useState(false);
+export default function Template({ children, defaultSelectedKeys }) {
+  const [collapsed, setCollapsed] = useState(true);
+  const [path, setPath] = useState([]);
   const { Header, Content, Footer, Sider } = Layout;
+  const router = useRouter();
 
   const menuSidebar = [
-    getItem('Dashboard', '1', <HomeOutlined />),
-    getItem('Customers', '2', <TeamOutlined />),
+    getItem(<Link href="/">Dashboard</Link>, '1', <HomeOutlined />),
+    getItem(<Link href="/customers">Customers</Link>, '2', <TeamOutlined />),
   ];
 
   function getItem(label, key, icon, children) {
@@ -26,8 +29,14 @@ export default function Template({ children }) {
     };
   }
 
+  useEffect(() => {
+    let url = router.route.split('/');
+    setPath(url);
+  }, []);
+
   return (
     <Layout className="container">
+      {/* Navbar Left */}
       <Sider
         theme="light"
         className="sidebar"
@@ -36,16 +45,33 @@ export default function Template({ children }) {
         onCollapse={(value) => setCollapsed(value)}
       >
         <div className="logo" />
-        <Menu defaultSelectedKeys={['1']} mode="inline" items={menuSidebar} />
+        <Menu
+          defaultSelectedKeys={[defaultSelectedKeys]}
+          mode="inline"
+          items={menuSidebar}
+        />
       </Sider>
 
       <Layout>
+        {/* Navbar Top */}
         <Header className="header">
           <Breadcrumb separator=">">
-            <Breadcrumb.Item href="/">
-              <HomeOutlined />
-            </Breadcrumb.Item>
-            <Breadcrumb.Item>Bill</Breadcrumb.Item>
+            <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+            {path.map((item, idx) => {
+              let url;
+              for (let i = 1; i <= idx; i++) {
+                if (url) {
+                  url += `/${path[i]}`;
+                } else {
+                  url = `/${path[i]}`;
+                }
+              }
+              return (
+                <Breadcrumb.Item href={url} key={idx}>
+                  {item}
+                </Breadcrumb.Item>
+              );
+            })}
           </Breadcrumb>
           <div className="nav-topright">
             <div>
@@ -54,15 +80,12 @@ export default function Template({ children }) {
             </div>
             <div className="nav-btn">
               <Avatar src="https://joeschmoe.io/api/v1/random" />
-              <span>Asep Rudi</span>
+              <span>John Doe</span>
             </div>
           </div>
         </Header>
 
-        <Content className="content">
-          <span>Asep Rudi</span>
-          <div>{children}</div>
-        </Content>
+        <Content className="content">{children}</Content>
 
         {/* Footer */}
         <Footer className="footer">MIG Test ©2022 Created by Asep</Footer>

@@ -1,0 +1,6 @@
+.btn-table {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  gap: 20px;
+}

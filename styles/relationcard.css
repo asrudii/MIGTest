@@ -1,0 +1,25 @@
+.relation-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.relation-info > span {
+  font-size: 32px;
+}
+
+.relation-info > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.relation-info > div > span:nth-child(1) {
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 100%;
+}
+
+.relation-info > div > span:nth-child(2) {
+  color: gray;
+}
