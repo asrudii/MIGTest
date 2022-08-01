@@ -95,8 +95,7 @@ export default function Customers() {
   };
 
   const handEdit = (values) => {
-    localStorage.setItem('data-edit', JSON.stringify(values));
-    router.push('/customers/edit');
+    router.push({ pathname: '/customers/edit', query: values });
   };
 
   const onSearch = () => {

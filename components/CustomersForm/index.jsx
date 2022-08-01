@@ -157,7 +157,7 @@ export default function CustomersForm({ dataEdit }) {
       </Form.Item>
       {dataEdit && (
         <Form.Item name="status" label="Switch">
-          <Switch defaultChecked={dataEdit.status} />
+          <Switch defaultChecked={dataEdit.status === 'true' ? true : false} />
         </Form.Item>
       )}
 
