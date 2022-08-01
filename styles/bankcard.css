@@ -24,13 +24,12 @@
 
 .bank-content-left {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 
 .bank-content-left > div:nth-child(1) {
-  width: 130px;
-  height: 100px;
-  background-color: rgb(185, 167, 4);
+  width: 100px;
+  height: 70px;
   border-radius: 10px;
   padding: 20px;
   display: flex;
@@ -38,6 +37,16 @@
   align-items: flex-end;
   color: #ffffff;
   font-weight: bold;
+}
+
+.background-card1 {
+  background-color: #33a3be;
+  background-image: linear-gradient(to right, #33a3be, #60cae3);
+}
+
+.background-card2 {
+  background-color: #ead601;
+  background-image: linear-gradient(to right, #ead601, #97ad09);
 }
 
 .bank-detail {
@@ -48,10 +57,31 @@
 
 .bank-detail > span:nth-child(1) {
   font-weight: 700;
+  font-size: 12px;
 }
 
 .bank-detail > div {
   display: flex;
   flex-direction: column;
   color: gray;
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .bank-content-left > div:nth-child(1) {
+    width: 130px;
+    height: 100px;
+  }
+
+  .bank-content-left {
+    gap: 20px;
+  }
+
+  .bank-detail > span:nth-child(1) {
+    font-size: 14px;
+  }
+
+  .bank-detail > div {
+    font-size: 14px;
+  }
 }

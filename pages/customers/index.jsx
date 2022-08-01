@@ -94,6 +94,11 @@ export default function Customers() {
     });
   };
 
+  const handEdit = (values) => {
+    localStorage.setItem('data-edit', JSON.stringify(values));
+    router.push('/customers/edit');
+  };
+
   const onSearch = () => {
     let data = originalData.filter((item) => {
       let name = item.name?.toLocaleLowerCase();
@@ -145,7 +150,12 @@ export default function Customers() {
             <Button type="primary">Add Customer</Button>
           </Link>
         </div>
-        <CustomerTable data={data} loading={loading} onDelete={handDelete} />
+        <CustomerTable
+          data={data}
+          loading={loading}
+          onDelete={handDelete}
+          onEdit={handEdit}
+        />
       </main>
     </Template>
   );

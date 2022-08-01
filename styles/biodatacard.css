@@ -2,15 +2,17 @@
   object-fit: cover;
 }
 .img-profile {
+  margin: auto;
   margin-top: -65px;
+  z-index: 99;
   display: flex;
   justify-content: center;
-}
-
-.img-profile > span > img {
   border-radius: 65px;
-  border: 4px solid gray;
-  object-fit: cover;
+  border: 3px solid rgb(211, 211, 211);
+  width: 130px;
+  height: 130px;
+  overflow: hidden;
+  position: relative;
 }
 
 .title-biodata {
@@ -56,6 +58,11 @@
   padding-bottom: 10px;
 }
 
+.active {
+  color: #35763b;
+  font-weight: 700;
+}
+
 .card-content > ul > li > span {
   color: gray;
   font-size: 13px;
@@ -74,4 +81,8 @@
 .card-content > ul > li .icon-desc {
   justify-content: start;
   color: #35763b;
+}
+
+.link {
+  text-decoration: underline;
 }

@@ -4,20 +4,22 @@ import TitleCard from '../TitleCard';
 export default function CompanyActivity() {
   const data = [
     {
-      title: 'Ant Design Title 1',
+      title: 'Yusuf baru saja pergi ke kantor',
       description: 'hari ini, 06:00',
     },
     {
-      title: 'Ant Design Title 2',
+      title:
+        'Andi menyelesaikan berkas laporan bulan kemarin dengan rekan sekantornya',
       description: 'kemarin, 17:32',
     },
     {
-      title: 'Ant Design Title 3',
+      title:
+        'Andi menyelesaikan berkas laporan bulan kemarin dengan rekan sekantornya',
       description: 'hari ini, 06:00',
     },
   ];
   return (
-    <div className="card">
+    <div className="card card-fit">
       <div className="card-content">
         <TitleCard title="Aktivitas" />
         <div className="card-info-wrap">

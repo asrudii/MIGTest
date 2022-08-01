@@ -9,7 +9,7 @@ export default function CompanyBank() {
         <div className="card-info-wrap">
           <div className="bank-info">
             <div className="bank-content-left">
-              <div>Visa</div>
+              <div className="background-card2">Visa</div>
               <div className="bank-detail">
                 <span>Bank KB Bukopin</span>
                 <div>
@@ -25,11 +25,11 @@ export default function CompanyBank() {
           </div>
           <div className="bank-info">
             <div className="bank-content-left">
-              <div>Visa</div>
+              <div className="background-card1">Visa</div>
               <div className="bank-detail">
-                <span>Bank KB Bukopin</span>
+                <span>Citiy Bank Na</span>
                 <div>
-                  <span>**** 0876 - Yusron Taufiq</span>
+                  <span>**** 0876 - Si Tampan</span>
                   <span>IDR</span>
                 </div>
               </div>

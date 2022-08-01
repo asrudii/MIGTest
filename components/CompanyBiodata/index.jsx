@@ -1,5 +1,6 @@
 import { Switch } from 'antd';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   EditOutlined,
   MailOutlined,
@@ -21,6 +22,7 @@ export default function CompanyBiodata() {
           src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
           width={130}
           height={130}
+          objectFit="cover"
           alt="img-company"
         />
       </div>
@@ -37,7 +39,7 @@ export default function CompanyBiodata() {
           <li>
             <span>Status Perusahaan</span>
             <div>
-              <span>Aktif</span>
+              <span className="active">Aktif</span>
               <Switch defaultChecked />
             </div>
           </li>
@@ -67,7 +69,7 @@ export default function CompanyBiodata() {
           </li>
           <li>
             <span>Email</span>
-            <div className="icon-desc">
+            <div className="icon-desc link">
               <MailOutlined />
               <span>mig@mitrasolusi.group</span>
             </div>
@@ -81,9 +83,11 @@ export default function CompanyBiodata() {
           </li>
           <li>
             <span>Situs Web</span>
-            <div className="icon-desc">
+            <div className="icon-desc link">
               <GlobalOutlined />
-              <span>mitramas.com</span>
+              <a href="http://mitramas.com" target="blank">
+                <span>mitramas.com</span>
+              </a>
             </div>
           </li>
         </ul>

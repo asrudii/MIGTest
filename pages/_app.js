@@ -7,6 +7,7 @@ import '../styles/bankcard.css';
 import '../styles/relationcard.css';
 import '../styles/customers.css';
 import '../styles/login.css';
+import '../styles/dashboard.css';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;

@@ -17,31 +17,25 @@ export default function Home() {
       </Head>
 
       <main>
-        <Row gutter={[20, 20]}>
-          <Col span={6}>
+        <div className="container-dashboard">
+          <div className="container-dashboard-left">
             <CompanyBiodata />
-          </Col>
-          <Col span={18}>
-            <Row gutter={[20, 20]}>
-              <Col span={24}>
-                <CompanyLocation />
-              </Col>
-              <Col span={12}>
-                <Row gutter={[20, 20]}>
-                  <Col span={24}>
-                    <CompanyBank />
-                  </Col>
-                  <Col span={24}>
-                    <CompanyRelation />
-                  </Col>
-                </Row>
-              </Col>
-              <Col span={12}>
+          </div>
+          <div className="container-dashboard-right">
+            <div className="container-dashboard-right-top">
+              <CompanyLocation />
+            </div>
+            <div className="container-dashboard-right-bottom">
+              <div className="bottom-left">
+                <CompanyBank />
+                <CompanyRelation />
+              </div>
+              <div className="bottom-right">
                 <CompanyActivity />
-              </Col>
-            </Row>
-          </Col>
-        </Row>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </Template>
   );

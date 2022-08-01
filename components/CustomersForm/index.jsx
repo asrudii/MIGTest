@@ -155,10 +155,9 @@ export default function CustomersForm({ dataEdit }) {
       <Form.Item name="job_title" label="Job Title">
         <Input />
       </Form.Item>
-
       {dataEdit && (
         <Form.Item name="status" label="Switch">
-          <Switch defaultChecked={dataEdit.status === 'true' ? true : false} />
+          <Switch defaultChecked={dataEdit.status} />
         </Form.Item>
       )}
 

@@ -1,14 +1,14 @@
 import CustomersForm from '../../../components/CustomersForm';
 import Template from '../../../components/Template';
-import { useRouter } from 'next/router';
 
 export default function EditCustomer() {
-  const router = useRouter();
+  let dataEdit = localStorage.getItem('data-edit');
+  if (dataEdit) dataEdit = JSON.parse(dataEdit);
 
   return (
     <Template defaultSelectedKeys="2">
       <main>
-        <CustomersForm dataEdit={router.query} />
+        <CustomersForm dataEdit={dataEdit} />
       </main>
     </Template>
   );

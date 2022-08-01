@@ -1,10 +1,7 @@
 import { Table, Badge, Space, Button } from 'antd';
 import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
-import { useRouter } from 'next/router';
 
-export default function CustomerTable({ data, loading, onDelete }) {
-  const router = useRouter();
-
+export default function CustomerTable({ data, loading, onDelete, onEdit }) {
   const columns = [
     {
       title: 'Name',
@@ -71,12 +68,7 @@ export default function CustomerTable({ data, loading, onDelete }) {
           <Button
             type="primary"
             icon={<EditOutlined />}
-            onClick={() =>
-              router.push({
-                pathname: '/customers/edit',
-                query: record,
-              })
-            }
+            onClick={() => onEdit(record)}
           >
             Edit
           </Button>
@@ -92,6 +84,7 @@ export default function CustomerTable({ data, loading, onDelete }) {
       ),
     },
   ];
+
   return (
     <div>
       <Table

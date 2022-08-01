@@ -5,6 +5,7 @@ import {
   BellOutlined,
 } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu, Avatar } from 'antd';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -44,7 +45,11 @@ export default function Template({ children, defaultSelectedKeys }) {
         collapsed={collapsed}
         onCollapse={(value) => setCollapsed(value)}
       >
-        <div className="logo" />
+        <div className="logo">
+          <Link href="/">
+            <Image src="/img/logo.png" width={50} height={50} alt="logo" />
+          </Link>
+        </div>
         <Menu
           defaultSelectedKeys={[defaultSelectedKeys]}
           mode="inline"

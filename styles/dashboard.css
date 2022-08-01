@@ -1,0 +1,49 @@
+.container-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.container-dashboard-left {
+  display: flex;
+  flex: 1;
+  margin: auto;
+}
+
+.container-dashboard-right {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  gap: 20px;
+}
+
+.container-dashboard-right-bottom {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 20px;
+}
+
+.container-dashboard-right-bottom .bottom-left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 20px;
+}
+
+.container-dashboard-right-bottom .bottom-right {
+  display: flex;
+  flex: 1;
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .container-dashboard {
+    flex-direction: row;
+  }
+
+  .container-dashboard-right-bottom {
+    flex-direction: row;
+  }
+}

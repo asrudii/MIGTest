@@ -3,7 +3,7 @@ import TitleCard from '../TitleCard';
 
 export default function CompanyRelation() {
   return (
-    <div className="card">
+    <div className="card card-fit">
       <div className="card-content">
         <TitleCard title="Relasi" btntitle="Lihat Semua" />
         <div className="card-info-wrap">
